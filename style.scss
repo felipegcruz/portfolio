@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+// Variables
+
+$extra-extra-light-gray:#F5F8FA;
+$extra-light-gray:#E1E8ED;
+$light-gray:#AAB8C2;
+$dark-gray:#657786;
+$black:#14171A;
+$blue:#1DA1F2;
+$yellow:#FFFC00;
+
+// Reset
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Global
+
+body,
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+// Classes
+
+.bold {
+    font-weight: bold;
+}
+
+.weight-400 {
+    font-weight: 400;
+}
+
+.weight-700 {
+    font-weight: 700;
+}
+
+.weight-900 {
+    font-weight: 900;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.yellow-background {
+    background-color: $yellow;
+}
+
+.dark-gray-background {
+    background-color: $dark-gray;
+}
+
+.black-background {
+    background-color: $black;
+}
+
+.color-extra-extra-light-gray {
+    color: $extra-extra-light-gray;
+}
+
+.color-extra-light-gray {
+    color: $extra-light-gray;
+}
+
+.extra-light-gray-background {
+    background-color: $extra-light-gray;
+}
+
+.active {
+    color: $dark-gray !important;
+}
+
+.button {
+    border: 1px solid $black;
+    padding: 1rem 3rem;
+    font-size: 0.9rem;
+
+    &:hover {
+        color: $extra-extra-light-gray;
+        background-color: $black;
+        transition: 0.3s ease;
+    }
+}
+
+.background-yellow {
+    height: 30vh;
+    padding: 4rem 4rem;
+
+    p {
+        font-size: 3rem;
+    }
+}
+
+.background-yellow p::after {
+    content: '';
+    background: $yellow;
+    width: 50rem;
+    height: 9rem;
+    position: absolute;
+    left: 0;
+    margin-top: 2rem;
+    z-index: -1;
+}
+
+// Navbar
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 14vh;
+    background-color: $extra-extra-light-gray;
+
+    .logo {
+        color: $black;
+        letter-spacing: 3px;
+
+        a {
+            p {
+                font-size: 1rem;
+                line-height: 0.5rem;
+            }
+        }
+
+        .logo-text1 {
+            padding-bottom: 1rem;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: $black;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-size: 1rem;
+
+            &:hover {
+                color: $dark-gray;
+                transition: 1s ease;
+            }
+        }
+    }
+
+    .burger {
+        display: none;
+
+        div {
+            width: 25px;
+            height: 3px;
+            background-color: $black;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+// Section Presentation
+
+.main-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem 0;
+    background-color: $extra-extra-light-gray;
+    height: 100vh;
+
+    .main-section-text {
+        p {
+            font-size: 4rem;
+            text-align: left;
+            width: 90%;
+            padding-left: 4rem;
+        }
+    }
+
+    img {
+        display: block;
+        padding: 0;
+        margin: 0;
+        padding-left: 1rem;
+        background-position: center;
+        height: 100%;
+    }
+}
+
+
+
+.presentation-text01 {
+    padding-top: 7rem;
+    width: 50%;
+    text-align: left;
+    display: block;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.presentation-text02 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.9rem;
+
+    .button-this-is-me-text02 {
+        padding-bottom: 2rem;
+    }
+}
+
+
+
+// Section 'cover' letter
+
+.cover-letter-section {
+    padding-top: 1rem;
+    height: 120vh;
+    line-height: 2rem;
+    position: relative;
+    padding-bottom: 3rem;
+    margin-bottom: 1rem;
+
+    img {
+        float: right;
+        position: relative;
+    }
+
+    .cover-letter {
+        width: 65%;
+        text-align: left;
+        background-color: $extra-light-gray;
+        position: absolute;
+        margin-left: 120px;
+        margin-top: 200px;
+        height: 70vh;
+        padding: 4rem;
+
+        h1 {
+            padding-bottom: 2rem;
+        }
+    }
+
+    .cover-letter:after {
+        content: '';
+        width: 100px;
+        height: 390px;
+        background-color: $yellow;
+        position: absolute;
+        right: -50px;
+        bottom: 0;
+    }
+
+    .button-cover-letter-section {
+        a {
+            position: absolute;
+            bottom: 0;
+            left: 120px;
+        }
+    }
+}
+
+// Section Technologies
+
+.technologies02 {
+    background-color: $black;
+    color: $extra-extra-light-gray;
+    height: 60vh;
+    width: 1200px;
+    margin: 0 auto 3rem auto;
+    padding: 5rem;
+    text-align: center;
+
+    .technologies02-text {
+        padding-bottom: 5rem;
+    }
+
+    .technologies02-icons {
+        i {
+            padding: 2rem;
+        }
+    }
+}
+
+// Side Links
+
+.side-links {
+    position: absolute;
+    right: 0;
+    top: 40vh;
+    position: fixed;
+    z-index: 1;
+    background-color: $yellow;
+    border-radius: 10px;
+    padding: 0.5rem;
+    opacity: 0.6;
+
+    a {
+        padding: 0;
+        margin: 0;
+
+        :hover {
+            color: $dark-gray;
+        }
+    }
+
+    &:hover {
+        opacity: 1;
+        transition: 1s ease;
+    }
+
+    .links i {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0.9rem;
+    }
+
+
+}
+
+// Footer
+
+footer {
+    background-color: $black;
+    width: 100%;
+    color: $extra-extra-light-gray;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 1rem 5rem;
+
+    .footer-social {
+        i {
+            padding: 1rem;
+            color: $extra-extra-light-gray;
+
+            &:hover {
+                color: $dark-gray;
+                transition: 1s ease;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// Media Query
+
+@media screen and (max-width:1024px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+
+        .nav-links {
+            width: 60% !important;
+            position: absolute;
+            right: 0;
+            height: 92vh;
+            top: 8vh;
+            background-color: $extra-extra-light-gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            transform: translate(100%);
+            opacity: 0.9;
+            // transition: transform 0.5s ease-in;
+
+            li {
+                opacity: 0;
+            }
+        }
+
+        .burger {
+            display: block;
+            cursor: pointer;
+        }
+
+        .nav-active {
+            transform: translate(0%);
+        }
+    }
+
+    // Section Presentation
+    .main-section {
+        height: 120vh;
+    }
+
+    .main-section-text p {
+        font-size: 0.5rem;
+        line-height: 4.8rem;
+        display: block;
+        width: 100vw;
+    }
+
+    .main-section-picture {
+        display: none;
+    }
+
+    // Cover letter
+
+    .cover-letter-section {
+        padding-top: 1rem;
+        height: 230vh;
+        line-height: 2rem;
+        position: relative;
+        padding-bottom: 3rem;
+        margin-bottom: 1rem;
+
+
+        .cover-letter {
+            width: 70%;
+            text-align: left;
+            background-color: $extra-light-gray;
+            position: absolute;
+            margin-left: 120px;
+            margin-top: 300px;
+            margin-bottom: 13rem;
+            height: 170vh;
+            padding: 4rem;
+
+            h1 {
+                padding-bottom: 2rem;
+            }
+        }
+
+        .cover-letter:after {
+            content: '';
+            width: 100px;
+            height: 750px;
+            background-color: $yellow;
+            position: absolute;
+            right: -50px;
+            bottom: 0;
+        }
+
+        .button-cover-letter-section {
+            a {
+                position: absolute;
+                bottom: -50px;
+                left: 120px;
+
+            }
+        }
+    }
+
+    // Section Technologies
+
+    .technologies02 {
+        background-color: $black;
+        color: $extra-extra-light-gray;
+        height: 60vh;
+        width: 100vw;
+        margin: 0 auto 3rem auto;
+        padding: 5rem;
+        text-align: center;
+
+        .technologies02-text {
+            padding-bottom: 1rem;
+        }
+
+        .technologies02-icons {
+            i {
+                padding: 2rem 0.4rem;
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+
+    .main-footer {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        .footer-text {
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

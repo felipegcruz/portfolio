@@ -499,6 +499,9 @@ footer {
   .main-footer .footer-text p {
     font-size: 0.9rem;
   }
+  .side-links {
+    display: none;
+  }
 }
 
 @-webkit-keyframes navLinkFade {
